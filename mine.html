@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>self-introduction</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap{
+            padding: 32px 0 64px;
+            background-color: #54B1E5;
+        }
+        .content{
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 16px;
+            background-color: #fff;
+        }
+
         body {background-color:#eeeeff}
         h1 {
             color: white;
@@ -84,17 +102,48 @@
         var msg=document.querySelector('#msg');
         msg.textContent = "有吉勇人";
             }
+
+        /*window.addEventListener('DOMcontentLoaded',function(){
+            var img_elements = document.querSelectorAll("img");
+            for(var i=0; i<imag_elements.length; i++){
+                img_elements[i].src = img_elements[i].getAttribute("data-src");
+            }
+        });
     </script>
     
 </head>
 
-<body style="background-color:#eeeeff ;">
-    <center>
-    <h1>＜自己紹介＞</h1>
-    </center>
-    <hr>
-    <div>ボタンをおすべし</div>
-    <a href="#" class="btnripple" onclick="clickNow();">ボタン</a>
-    <span id="msg">名前</span>
-</body>
+<body class="wrap">
+    <div class="content">
+        <center>
+        <h1>＜自己紹介＞</h1>
+        </center>
+        <hr>
+        <div>ボタンをおす</div>
+        <a href="#" class="btnripple" onclick="clickNow();">ボタン</a>
+        <span id="msg">名前</span>
+
+        <form action="confirmation.php " method="post">
+            名前:<br />
+            <input type="text" nema="name" size="50" value="" /><br />
+
+            メールアドレス：<br />
+            <input type="text" name="mail" size="50" value="" /><br />
+
+            問い合わせ内容：<br />
+            <textarea name="inquiry"  cols="50" rows="5"></textarea><br />
+
+            <br />
+
+            <input type="submit" value="送信" />
+
+        </form>
+
+        <article>
+            <h1>画像レシピ</h1>
+            <img src="./self-introduction/kawasaki.jpg" alt="kawasaki" width="100">
+            <img src="./self-introduction/braitn.jpeg" alt="braitn" width="100">
+        </article>
+    </div>
+</body> 
 </html>
