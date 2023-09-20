@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Company</h1>
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>name</th><th>campany</th><th>year</th><th>URL</th>
+        </tr>
+        <script>
+            let companies = [
+                {
+                    name:"google",
+                    company:"Alphabet",
+                    founding:1998,
+                    url:"https://abc.xyz"
+                },
+                {
+                    name:"Apple",
+                    company:"Apple Inc",
+                    founding:1976,
+                    url:"https://www.apple.com"
+                },
+                {
+                    name:"Facebook",
+                    company:"Meta Platforms, Inc",
+                    founding:2004,
+                    url:"https://meta.com"
+                },
+                {
+                    name:"Amazon",
+                    company:"Amazon.com, Inc.",
+                    founding:1994,
+                    url:"https://www.amazon.com/"
+                },
+                {
+                    name:"Microsoft",
+                    company:"Microsoft Corporation",
+                    founding:1975,
+                    url:"https://www.microsoft.com"
+                }
+            ];
+            for(let company of companies){
+                document.write("<p>");
+                for(let key in company){
+                    let data = company[key];
+                    if( key == "url"){
+                        data = "<a href=\""+ data +"\">"+ data +"</a>";
+                    }
+                    document.write("<td>"+ data +"</td>");
+                }
+                document.write("</tr>");
+            }
+        </script>
+
+    </table>
+</body>
+</html>

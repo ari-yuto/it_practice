@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>社員データ</h1>
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>name</th>
+            <th>old</th>
+            <th>from</th>
+        </tr>
+        <script>
+            let staff = [
+                ["sato", 11, "tokyo"],
+                ["taro", 47, "chiba"],
+                ["suzuki", 25, "USA"]
+            ];
+            for (let i = 0; i < staff.length; i++) {
+                document.write("<tr>")
+                for (let j = 0; j < staff[i].length; j++) {
+                    document.write("<td>" + staff[i][j] + "</p>");
+                }
+                document.write("</tr>")
+            }
+        </script>
+    </table>
+</body>
+
+</html>
