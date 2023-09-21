@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>果物の種類</h1>
+    <ul>
+        <li>apple</li>
+        <li>orange</li>
+        <li>banana</li>
+    </ul>
+    <script>
+        let element = document.querySelector("ul");
+        let liLast = document.createElement("li");
+        liLast.textContent = "grapes";
+        element.appendChild(liLast);
+    </script>
+</body>
+</html>

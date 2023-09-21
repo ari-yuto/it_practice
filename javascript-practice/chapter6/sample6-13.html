@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>class sample</h1>
+    <script>
+        class Person{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+            information(){
+                return "名前:" + this.name + "&nbsp;年齢:" + this.age;
+            }
+        }
+        let persons = [];
+        persons.push(new Person("山田太朗", 18));
+        persons.push(new Person("佐藤花子", 17));
+        persons.forEach(function(person){
+            document.write("<p>" + person.information() + "</p>");
+        })
+        
+    </script>
+</body>
+</html>

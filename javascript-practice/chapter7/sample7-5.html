@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkInput() {
+            if (document.form1.user.value == "" || document.form1.tel.value == "") {
+                alert("未入力の内容があります");
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>ユーザーの情報登録</h1>
+    <form method="post" name="form1" action="result.html">
+        <p>ユーザーID[必須]</p>
+        <input type="text" name="user" size="20"><br />
+        <p>電話番号[必須]</p>
+        <input type="text" name="tel" size="20"><br />
+        <br>
+        <input type="submit" value="送信" onclick="checkInput()">
+    </form>
+</body>
+
+</html>
